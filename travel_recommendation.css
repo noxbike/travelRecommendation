@@ -15,7 +15,10 @@ body{
     background-color: rgba(0, 0, 0, 0.805);
     color: white;
 }
-
+.links{
+    padding: auto;
+    width: 20%;
+}
 #navbar, .links ul{
     width: 100%;
     display: flex;
@@ -42,13 +45,20 @@ a{
 }
 
 .searchBar{
+    min-width: 350px;
     padding: 0 10px 0 10px;
 }
 .searchBar .containerButton{
     position: absolute;
     z-index: 1;
+    width: 130px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
     right: 20px;
-    top:15px;
+    top:9px;
 }
 
 .searchBar button{
@@ -57,6 +67,12 @@ a{
     border: none;
     padding: 5px;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+.magnifying-glass{
+    margin-right: 5px;
+
 }
 
 .input{
@@ -69,4 +85,65 @@ a{
     width: 350px;
     padding: 10px;
     border-radius: 50px;
+
+}
+
+.home-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 95vh;
+    color: white;
+    background: rgb(0,128,107);
+    background: linear-gradient(94deg, rgba(0, 128, 107, 0.786) 0%, rgba(255,255,255,0) 70%);
+}
+
+.introduction{
+    
+    padding-left: 2%;
+    width: 40%;
+}
+
+.introduction h1{
+    font-weight: bolder;
+    font-size: 4em;
+}
+
+.introduction p{
+    font-size: medium;
+    font-weight: 200;
+    width: 70%;
+}
+
+.introduction button{
+    margin-top: 40px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(0, 128, 107, 0.862);
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+}
+
+.social-media{
+    height: 90vh;
+    padding: 10px;
+}
+
+.social-media .line{
+    height: 35%;
+    border: 2px solid white;
+    width: 0;
+    margin:60px auto;
+}
+
+.social-media .social-links ul{
+    padding: 5px;
+    text-align: center;
+}
+
+.social-links li{
+    margin: 25px auto;
+    width: 100%;
 }
