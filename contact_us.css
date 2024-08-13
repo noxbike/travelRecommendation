@@ -44,49 +44,9 @@ a{
     text-decoration: none;
     color: white;
 }
-
 .searchBar{
     min-width: 350px;
     padding: 0 10px 0 10px;
-}
-.searchBar .containerButton{
-    position: absolute;
-    z-index: 1;
-    width: 130px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px;
-    right: 20px;
-    top:9px;
-}
-
-.searchBar button{
-    background-color: rgb(0, 128, 107);
-    color: white;
-    border: none;
-    padding: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.magnifying-glass{
-    margin-right: 5px;
-
-}
-
-.input{
-    position: absolute;
-    z-index: 0;
-    color: green;
-    margin: auto;
-    top: 7px;
-    right: 10px;
-    width: 350px;
-    padding: 10px;
-    border-radius: 50px;
-
 }
 
 .home-section{
@@ -147,4 +107,43 @@ a{
 .social-links li{
     margin: 25px auto;
     width: 100%;
+}
+
+.form{
+    padding: 2%;
+    width: 45%;
+}
+
+.form form{
+    background-color: rgba(0, 0, 0, 0.305);
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.form input, .form textarea, .form label{
+    width: 90%;
+    margin: 10px;
+}
+
+.form button {
+    width: 91.5%;
+    margin:10px;
+}
+
+.form input , .form textarea{
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: none;
+}
+
+.form button{
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(0, 128, 107, 0.862);
+    padding: 7px;
 }
