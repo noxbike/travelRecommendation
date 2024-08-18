@@ -4,6 +4,7 @@
 
 body{
     width: 100%;
+    height: 100vh;
     margin: auto;
     background-image: url("https://www.viaggi-usa.it/wp-content/uploads/2022/10/manhattan-new-york.webp");
     background-size: cover;
@@ -11,30 +12,44 @@ body{
     background-repeat: no-repeat;
 }
 
+
 @media screen and (max-width: 1098px) {
-    .container{
+    .ourteam{
+        display: flex;
+        flex-direction: column; 
+        margin: auto;
+        width: 100%;
+    }
+
+    .ourteam h1{
+        width: 100%;
+        margin: auto;
+    }
+
+    .ourteam .employee ul{
+        padding: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 100%;
-
     }
-    .form{
-        width: 80%;
-    }
-
 }
-@media screen and (min-width: 1099px) {
-    .container{
+@media screen and (min-width:1099px){
+    
+    .ourteam{
         display: flex;
         flex-direction: row;
-        width: 100%;
-
+        justify-content: space-between;
+        align-items: center;
+        max-width: 978px;
     }
 
-    .form{
-        width: 45%;
+    .ourteam .employee ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 11px;
     }
 }
 
@@ -71,6 +86,7 @@ a{
     text-decoration: none;
     color: white;
 }
+
 .searchBar{
     min-width: 350px;
     padding: 0 10px 0 10px;
@@ -79,16 +95,15 @@ a{
 .home-section{
     display: flex;
     flex-direction: row;
-    align-items: center;
-    height: 95vh;
     color: white;
     background: rgb(0,128,107);
     background: linear-gradient(94deg, rgba(0, 128, 107, 0.786) 0%, rgba(255,255,255,0) 70%);
 }
 
 .introduction{
+    
     padding-left: 2%;
-    width: 40%;
+    width: 90%;
 }
 
 .introduction h1{
@@ -135,41 +150,71 @@ a{
     width: 100%;
 }
 
-.form{
-    padding: 2%;
-    max-width: 536px;
+.aboutus{
+    width: 95%;
+    margin: auto
 }
 
-.form form{
-    background-color: rgba(0, 0, 0, 0.305);
+.aboutus h1{
+    font-weight: 700;
+}
+
+.aboutus p{
+    background-color: rgba(0, 0, 0, 0.473);
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 15px;
+    line-height: 1.5;
+    max-width: 865px;
+}
+
+.ourteam h1{
+    width: 100px;
+    margin: auto;
+}
+
+.ourteam .employee{
+    max-width: 750px;
     width: 100%;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
 }
 
-.form input, .form textarea, .form label{
-    width: 90%;
+
+
+.ourteam li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.473);
+    margin: 5px;
+    border-radius: 5px;
+    width: 250px;
+}
+
+.ourteam li div{
+    width: 190px;
+    margin-right: auto;
+}
+
+.ourteam img{
     margin: 10px;
 }
 
-.form button {
-    width: 91.5%;
-    margin:10px;
+.ourteam p{
+    font-size: small;
 }
 
-.form input , .form textarea{
-    padding: 5px;
-    border: none;
+.ourteam .position{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gray;
+    background-color: rgba(0, 0, 255, 0.668);
+    text-align: center;
+    height: 25px;
     border-radius: 5px;
-    background-color: none;
+    margin-bottom: 10px;
+
 }
 
-.form button{
-    border: none;
-    border-radius: 5px;
-    background-color: rgba(0, 128, 107, 0.862);
-    padding: 7px;
-}

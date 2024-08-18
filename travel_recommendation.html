@@ -20,16 +20,17 @@
             </ul>
         </div>
         <div class="searchBar">
-            <input class="input" type="text" placeholder="Enter a destination or keyword"/>
+            <input class="input" id="input-search" type="text" placeholder="Enter a destination or keyword"/>
             <div class="containerButton">
                 <a class="magnifying-glass" href="#">
                     <img src="magnifying-glass.svg" alt="magnifying-glass" width="20px">
                 </a>
-                <button>Search</button>
-                <button>Clear</button>
+                <button id="search">Search</button>
+                <button id="clear">Clear</button>
             </div>
         </div>
     </nav>
+    <div id="result"></div>
     <section class="home-section">
         <div class="social-media">
             <div class="line"></div>
@@ -48,5 +49,11 @@
             <button>BOOK NOW</button>
         </div>
     </section>"
+    <div id="Searchresult">
+        <ul id="list-result">
+
+        </ul>
+    </div>
+    <script src="travel_recommendation.js"></script>
 </body>
 </html>

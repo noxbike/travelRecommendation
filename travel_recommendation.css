@@ -94,26 +94,39 @@ a{
     flex-direction: row;
     align-items: center;
     height: 95vh;
+    width: 100%;
     color: white;
     background: rgb(0,128,107);
     background: linear-gradient(94deg, rgba(0, 128, 107, 0.786) 0%, rgba(255,255,255,0) 70%);
 }
 
 .introduction{
-    
-    padding-left: 2%;
-    width: 40%;
+    width: 100%;
 }
 
-.introduction h1{
-    font-weight: bolder;
-    font-size: 4em;
+@media screen and (max-width: 768px) {
+    .introduction h1{
+        font-size:3em;
+        font-weight: bolder;
+        max-width: 557px;
+        width: 100%;
+    }    
+}
+
+@media screen and (min-width: 769px) {
+    .introduction h1{
+        font-weight: bolder;
+        font-size: 4em;
+        max-width: 557px;
+        width: 100%;
+    }
 }
 
 .introduction p{
     font-size: medium;
     font-weight: 200;
-    width: 70%;
+    max-width: 413.50px;
+    width: 100%;
 }
 
 .introduction button{
@@ -147,4 +160,53 @@ a{
 .social-links li{
     margin: 25px auto;
     width: 100%;
+}
+
+#Searchresult{
+    position: absolute;
+    right: 50px;
+    top: 90px;
+    width: 400px;
+}
+
+#list-result li{
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 1px 2px 7px black;
+    margin: 10px;
+}
+
+.top-bar{
+    width: 95%;
+    height: 20px;
+    border-radius: 50px;
+    margin: 10px;
+    background-color: rgba(0, 128, 107, 0.862)!important;
+}
+#list-result p, #list-result h4, #list-result button{
+    padding: 5px 10px;
+}
+
+#list-result p{
+    font-size: small;
+    color: gray;
+    font-style: oblique;
+}
+
+#list-result button{
+    background-color: rgba(0, 128, 107, 0.862);
+    border: none;
+    padding: 5px 10px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    color: white;
+    border-radius: 5px;
+}
+
+.background-city {
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
