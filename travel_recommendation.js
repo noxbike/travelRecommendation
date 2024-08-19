@@ -2,6 +2,17 @@ var searchButton = document.getElementById("search");
 var clear = document.getElementById("clear");
 var searchText = document.getElementById("input-search");
 var listResult = document.getElementById("list-result");
+var buttonMenu = document.getElementById("buttonMenu");
+var menuPhone = document.getElementById("menuPhone");
+
+buttonMenu.addEventListener("click",() => {
+    if(menuPhone.style.display == "none" || menuPhone.style.display == ""){
+        menuPhone.style.display = "flex";
+    }
+    else{
+        menuPhone.style.display = "none";
+    }
+})
 
 searchButton.addEventListener("click", () =>{
     let text = searchText.value
@@ -16,7 +27,7 @@ clear.addEventListener("click", () =>{
 const getData = (param) => {
     fetch("/travel_recommendation_api.json")
         .then(response => response.json())
-        .then(data => {
+        .then(data => { 
             let array = data[param];
             listResult.innerHTML = "<li class='top-bar'></li>";
             array.forEach(element => {
