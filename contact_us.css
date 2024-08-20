@@ -10,6 +10,26 @@ body{
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
+#mask{
+    position: absolute;
+    top: 52px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(0,128,107);
+    background: linear-gradient(94deg, rgba(0, 128, 107, 0.786) 0%, rgba(255,255,255,0) 70%);
+    z-index: 0;
+}
+
+.box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+}
 
 @media screen and (max-width: 1098px) {
     .container{
@@ -83,6 +103,7 @@ a{
     }
     #menuPhone{
         position: absolute;
+        z-index: 2;
         display: none;
         flex-direction: column;
         align-items: flex-start;
@@ -91,6 +112,7 @@ a{
         right: 0;
         line-height: 2;
         width: 90%;
+        max-width: 420px;
         height: 400px;
         background-color: rgba(0, 0, 0, 0.805);
     }
@@ -101,14 +123,14 @@ a{
     }
     .searchBarPhone .containerButton{
         position: absolute;
-        z-index: 1;
+        z-index: 3;
         width: 130px;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        right: 20px;
-        top:-4px;
+        margin-top: -25px;
+        margin-left: 240px;
     }
     
     .searchBarPhone button{
@@ -124,9 +146,9 @@ a{
         margin-right: 5px;
     
     }
-    .input{
+    .input, .inputPhone{
         position: absolute;
-        z-index: 0;
+        z-index: 2;
         color: green;
         margin: auto;
         top: 7px;
@@ -157,18 +179,18 @@ a{
 }
 
 .home-section{
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
     height: 95vh;
     color: white;
-    background: rgb(0,128,107);
-    background: linear-gradient(94deg, rgba(0, 128, 107, 0.786) 0%, rgba(255,255,255,0) 70%);
+    z-index: 1;
 }
 
 .introduction{
-    padding-left: 2%;
-    width: 40%;
+    padding-left: 10%;
+    width: 90%;
 }
 
 .introduction h1{

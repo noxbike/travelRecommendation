@@ -11,6 +11,27 @@ body{
     background-repeat: no-repeat;
 }
 
+#mask{
+    position: absolute;
+    top: 52px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(0,128,107);
+    background: linear-gradient(94deg, rgba(0, 128, 107, 0.786) 0%, rgba(255,255,255,0) 70%);
+    z-index: 0;
+}
+
+.box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+}
+
 #navbar{
     background-color: rgba(0, 0, 0, 0.805);
     color: white;
@@ -36,8 +57,10 @@ body{
         right: 0;
         line-height: 2;
         width: 90%;
+        max-width: 420px;
         height: 400px;
         background-color: rgba(0, 0, 0, 0.805);
+        z-index: 2;
     }
     .searchBarPhone{
         margin: 20px 0 20px 0;
@@ -46,14 +69,14 @@ body{
     }
     .searchBarPhone .containerButton{
         position: absolute;
-        z-index: 1;
+        z-index: 3;
         width: 130px;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        right: 20px;
-        top:-4px;
+        margin-top: -50px;
+        margin-left: 210px;
     }
     
     .searchBarPhone button{
@@ -114,16 +137,16 @@ a{
     padding: 0 10px 0 10px;
 }
 .searchBar .containerButton{
-    position: absolute;
-    z-index: 1;
+    position: relative;
+    z-index: 3;
     width: 130px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     padding: 5px;
-    right: 20px;
-    top:9px;
+    margin-top: -30px;
+    margin-left: 190px;
 }
 
 .searchBar button{
@@ -140,31 +163,35 @@ a{
 
 }
 
-.input{
-    position: absolute;
-    z-index: 0;
+.input, .inputPhone{
+    position: relative;
+    z-index: 2;
     color: green;
     margin: auto;
     top: 7px;
     right: 10px;
-    width: 350px;
+    width: 330px;
     padding: 10px;
     border-radius: 50px;
+}
 
+.inputPhone{
+    margin-left: 20px;
 }
 
 .home-section{
+    z-index: 1;
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
     height: 95vh;
     width: 100%;
     color: white;
-    background: rgb(0,128,107);
-    background: linear-gradient(94deg, rgba(0, 128, 107, 0.786) 0%, rgba(255,255,255,0) 70%);
-}
+ }
 
 .introduction{
+    padding-left: 9%;
     width: 100%;
 }
 

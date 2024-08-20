@@ -11,6 +11,26 @@ body{
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
+#mask{
+    position: absolute;
+    top: 52px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(0,128,107);
+    background: linear-gradient(94deg, rgba(0, 128, 107, 0.786) 0%, rgba(255,255,255,0) 70%);
+    z-index: 0;
+}
+
+.box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+}
 
 
 @media screen and (max-width: 1098px) {
@@ -106,8 +126,10 @@ a{
         right: 0;
         line-height: 2;
         width: 90%;
+        max-width: 420px;
         height: 400px;
         background-color: rgba(0, 0, 0, 0.805);
+        z-index: 2;
     }
     .searchBarPhone{
         margin: 20px 0 20px 0;
@@ -116,14 +138,14 @@ a{
     }
     .searchBarPhone .containerButton{
         position: absolute;
-        z-index: 1;
+        z-index: 3;
         width: 130px;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        right: 20px;
-        top:-4px;
+        margin-top: -25px;
+        margin-left: 240px;
     }
     
     .searchBarPhone button{
@@ -139,14 +161,14 @@ a{
         margin-right: 5px;
     
     }
-    .input{
+    .input, .inputPhone{
         position: absolute;
         z-index: 0;
         color: green;
         margin: auto;
         top: 7px;
         right: 10px;
-        width: 350px;
+        width: 330px;
         padding: 10px;
         border-radius: 50px;
     
@@ -167,22 +189,26 @@ a{
     }
 }
 
+.inputPhone{
+    margin-left: 20px;
+}
+
 .searchBar{
     min-width: 350px;
     padding: 0 10px 0 10px;
 }
 
 .home-section{
+    position: relative;
     display: flex;
     flex-direction: row;
     color: white;
-    background: rgb(0,128,107);
-    background: linear-gradient(94deg, rgba(0, 128, 107, 0.786) 0%, rgba(255,255,255,0) 70%);
+    z-index: 1;
 }
 
 .introduction{
     
-    padding-left: 2%;
+    padding-left: 10%;
     width: 90%;
 }
 

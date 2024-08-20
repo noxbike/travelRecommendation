@@ -1,6 +1,9 @@
 var searchButton = document.getElementById("search");
+var searchButtonPhone = document.getElementById("searchPhone");
 var clear = document.getElementById("clear");
+var clearPhone = document.getElementById("clearPhone");
 var searchText = document.getElementById("input-search");
+var searchTextPhone = document.getElementById("input-searchPhone");
 var listResult = document.getElementById("list-result");
 var buttonMenu = document.getElementById("buttonMenu");
 var menuPhone = document.getElementById("menuPhone");
@@ -14,14 +17,28 @@ buttonMenu.addEventListener("click",() => {
     }
 })
 
+searchButtonPhone.addEventListener("click", () =>{
+    let text = searchTextPhone.value
+
+    getData(text.toLowerCase());
+    
+});
+
 searchButton.addEventListener("click", () =>{
     let text = searchText.value
 
     getData(text.toLowerCase());
     
 });
+
+clearPhone.addEventListener("click", () =>{
+    searchTextPhone.value = "";
+    listResult.innerHTML = "";
+});
+
 clear.addEventListener("click", () =>{
     searchText.value = "";
+    listResult.innerHTML = "";
 });
 
 const getData = (param) => {
