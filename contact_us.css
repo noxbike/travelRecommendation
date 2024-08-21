@@ -116,48 +116,6 @@ a{
         height: 400px;
         background-color: rgba(0, 0, 0, 0.805);
     }
-    .searchBarPhone{
-        margin: 20px 0 20px 0;
-        min-width: 350px;
-        padding: 0 10px 0 10px;
-    }
-    .searchBarPhone .containerButton{
-        position: absolute;
-        z-index: 3;
-        width: 130px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        margin-top: -25px;
-        margin-left: 240px;
-    }
-    
-    .searchBarPhone button{
-        background-color: rgb(0, 128, 107);
-        color: white;
-        border: none;
-        padding: 5px;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    
-    .magnifying-glass{
-        margin-right: 5px;
-    
-    }
-    .input, .inputPhone{
-        position: absolute;
-        z-index: 2;
-        color: green;
-        margin: auto;
-        top: 7px;
-        right: 10px;
-        width: 350px;
-        padding: 10px;
-        border-radius: 50px;
-    
-    }
 }
 
 @media screen and (min-width: 996px){
@@ -172,10 +130,6 @@ a{
         width: 30%;
         font-weight: 600;
     }
-}
-.searchBar{
-    min-width: 350px;
-    padding: 0 10px 0 10px;
 }
 
 .home-section{

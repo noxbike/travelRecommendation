@@ -47,19 +47,18 @@ const getData = (param) => {
         .then(data => { 
             let array = data[param];
             listResult.innerHTML = "<li class='top-bar'></li>";
-            array.forEach(element => {
-                console.log(element)
+            for(let i = 0; i < 2; i++){
                 if(param === "countries"){
-                    element["cities"].forEach(country => {
-                        createListOfRecommendation(country)
-                    })
+                    createListOfRecommendation(array[i]['cities'][i]);
                 }
                 else{
-                   createListOfRecommendation(element)
+                   createListOfRecommendation(array[i])
                 }   
-                })   
-            });
-}
+            }
+            menuPhone.style.display = "none";
+        })
+};
+
 
 const createListOfRecommendation = (element) => {
     let li = document.createElement("li");

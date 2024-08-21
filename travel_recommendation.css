@@ -274,6 +274,11 @@ a{
     margin: 10px;
     background-color: rgba(0, 128, 107, 0.862)!important;
 }
+
+#list-result h4{
+    color: black;
+}
+
 #list-result p, #list-result h4, #list-result button{
     padding: 5px 10px;
 }
