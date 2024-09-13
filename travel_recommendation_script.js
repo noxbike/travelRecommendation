@@ -42,7 +42,7 @@ clear.addEventListener("click", () =>{
 });
 
 const getData = (param) => {
-    fetch("travel_recommendation_api.json")
+    fetch("api/travel_recommendation_api.json")
         .then(response => response.json())
         .then(data => { 
             let array = data[param];
